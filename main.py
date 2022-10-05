@@ -1,8 +1,9 @@
 from pyrogram import Client, filters,enums
-import re
+import pyrogram
 from instagram import Pdf
 from pyrogram.types import InlineKeyboardButton,InlineKeyboardMarkup
 import requests
+import re
 
 
 
@@ -18,7 +19,8 @@ async def user_add_json(tg_id,xabar,soz,f_name,kanal):
     data = requests.get(f'http://127.0.0.1:8000/users/{tg_id}/\"{xabar}\"/{soz}/{f_name}/{kanal}/')
 
     return data.text
-app = Client(api_id='13077609',api_hash='b3aea42a802f2e577e15b1e2af8ceba3',name='aliyuldashev0526')
+app = Client(api_id='Your Id',api_hash='Your Hash',name='Name',)
+
 
 
 
@@ -30,7 +32,6 @@ app.set_parse_mode(enums.ParseMode.HTML)
 
 @app.on_message(filters.channel)
 async def hello(client, message):
-    print(message)
     if message.text == None:
         msg = message.caption
     else:
@@ -39,21 +40,20 @@ async def hello(client, message):
     req = []
     res = False
     word = []
-    for m in msg.split():
-        for i in words:
-            req = re.findall(f'{i["word"]}', m, flags=re.IGNORECASE)
-            if req != []:
-                res = True
-                word.append(i['word'])
-        if res:
-            for admin in await admin_get_json():
-                await app.send_message(admin['telegram_id'], f'ID: {message.chat.id}\n'
-                                                   f'SO`Z: {word}\n'
-                                                   f'SANA: {message.date}\n'
-                                                   f'Kanal: {message.chat.title}\n'
-                                                   f'<a href=\"https://telegram.me/{message.chat.username}/{message.id}\">XABAR:{msg}</a>\n\n',
-                                       parse_mode=enums.ParseMode.HTML)
-                add = await user_add_json(tg_id=message.chat.id,xabar=msg,soz=word,f_name=message.from_user.first_name,kanal=message.chat.title)
+    for i in words:
+        req = re.findall(f'{i["word"]}', m, flags=re.IGNORECASE)
+        if req != []:
+            res = True
+            word.append(i['word'])
+    if res:
+        for admin in await admin_get_json():
+            await app.send_message(admin['telegram_id'], f'ID: {message.chat.id}\n'
+                                               f'SO`Z: {word}\n'
+                                               f'SANA: {message.date}\n'
+                                               f'Kanal: {message.chat.title}\n'
+                                               f'<a href=\"https://telegram.me/{message.chat.username}/{message.id}\">XABAR:{msg}</a>\n\n',
+                                   parse_mode=enums.ParseMode.HTML)
+            add = await user_add_json(tg_id=message.chat.id,xabar=msg,soz=word,f_name=message.from_user.first_name,kanal=message.chat.title)
 @app.on_message(filters.incoming)
 async def hello(client, message):
     words = await get_json()
@@ -63,12 +63,11 @@ async def hello(client, message):
         msg = message.text
     res = []
     word = []
-    for m in msg.split():
-        for i in words:
-            req = re.findall(f'{i["word"]}', m, flags=re.IGNORECASE)
-            if req != []:
-                res = True
-                word.append(i['word'])
+    for i in words:
+        req = re.findall(f'{i["word"]}', msg, flags=re.IGNORECASE)
+        if req != []:
+            res = True
+            word.append(i['word'])
     if message.chat.title == None:
         title = f'@{message.chat.username}'
     else:
