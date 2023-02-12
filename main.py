@@ -24,7 +24,6 @@ app = Client(api_id='Your Id',api_hash='Your Hash',name='Name',)
 
 
 
-
 tugma = InlineKeyboardMarkup([[
         InlineKeyboardButton("New button", callback_data="new_data")]])
 
