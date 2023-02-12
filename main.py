@@ -40,7 +40,7 @@ async def hello(client, message):
     res = False
     word = []
     for i in words:
-        req = re.findall(f'{i["word"]}', m, flags=re.IGNORECASE)
+        req = re.findall(f'{i["word"]}', msg, flags=re.IGNORECASE)
         if req != []:
             res = True
             word.append(i['word'])
