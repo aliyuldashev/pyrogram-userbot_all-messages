@@ -1,0 +1,30 @@
+{
+    "builds": [{
+        "src": "config/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "python_version": "python3.12" }
+    },
+    {
+        "src": "build_files.sh",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "staticfiles" }
+    }],
+    "routes": [
+        {
+            "src": "/static/(.*)",
+            "dest": "/static/$1",
+            "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+            "headers": {
+                "Access-Control-Allow-Origin": "*"
+                }
+        },
+        {
+            "src": "/(.*)",
+            "dest": "config//wsgi.py",
+            "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+            "headers": {
+                "Access-Control-Allow-Origin": "*"
+            }
+        }
+    ]
+}
