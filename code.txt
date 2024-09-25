@@ -103,7 +103,7 @@ async def hello(client, message):
         for admin in await admin_get_json():
             await app.send_message(admin['telegram_id'],f'ID: {message.chat.id}\n'
                                                f'SO`Z: {word}\n'
-                                               f'SANA: {message.date}\n' 
+                                               f'SANA: {message.date}\n'
                                                f'Kanal: {title}\n'
                                                f'<a href=\"t.me/{message.chat.username}/{message.id}\">XABAR: {msg}\n\n</a>',
                                    parse_mode=enums.ParseMode.HTML)

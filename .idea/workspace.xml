@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70331340-e030-440f-b31e-0deb5a45b897" name="Changes" comment="final Update main.py">
-      <change afterPath="$PROJECT_DIR$/internet2209.session" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unknown_errors.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pyrogram-userbot_all-messages.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pyrogram-userbot_all-messages.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ali's_bot.session" beforeDir="false" afterPath="$PROJECT_DIR$/Ali's_bot.session" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ali's_bot.session-journal" beforeDir="false" afterPath="$PROJECT_DIR$/Ali's_bot.session-journal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/hello.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +62,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="get-all-users" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pyrogram-userbot_all-messages" />
@@ -141,6 +136,8 @@
       <workItem from="1726313815643" duration="3081000" />
       <workItem from="1726380218471" duration="12000" />
       <workItem from="1726475131636" duration="924000" />
+      <workItem from="1726553789128" duration="802000" />
+      <workItem from="1727246775214" duration="610000" />
     </task>
     <task id="LOCAL-00001" summary="Update main.py">
       <created>1676161294452</created>
@@ -261,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676162930190</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="final Update main.py">
+      <created>1726554070056</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1726554070056</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
