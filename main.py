@@ -18,7 +18,7 @@ async def user_add_json(tg_id,xabar,soz,f_name,kanal):
     data = requests.get(f'http://127.0.0.1:8000/users/{tg_id}/\"{xabar}\"/{soz}/{f_name}/{kanal}/')
 
     return data.text
-app = Client(api_id='13077609',api_hash='b3aea42a802f2e577e15b1e2af8ceba3',name='aliyuldashev0526')
+app = Client(api_id='YOUR_APP_ID',api_hash='YOUR_API_HASH',name='YOUR_USER_NAME')
 
 
 
